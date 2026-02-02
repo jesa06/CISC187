@@ -32,7 +32,8 @@ int nums[100];
 5. Research how to find the memory address of an array. You can use any programming language of your choice. 
 > You can find the address of **any element** in the array by using the address-of operator (&) or by using pointer arithmetic with the array name. 
 
-    * Because array elements are stored in contiguous memory locations, the addresses are sequential. The address of arr[i] can be calculated with the formula:
+    * Because array elements are stored in contiguous memory locations, the addresses are sequential. 
+    The address of arr[i] can be calculated with the formula:
 
     * Address of arr[i] = Base Address + (Index * Size of each element) 
 > You can find the starting address or the **base address** in the array by just printing the array name or with the pointer and index 0.
