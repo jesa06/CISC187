@@ -5,10 +5,10 @@
 1. Explain how to create an array of 100 elements.
 > To create an array of 100 elements, you would first choose what data type (string, int, double,...) and then choose a name for the array. I chose colors. Then to enter the size, you would put in the number of elements inside of brackets, right after the array name. You could create it empty or initialize all elements, if you wanted to.
 
-'''C++
+```C++
 string colors[100] = {"Red", "Purple", "Blue", "Green",...};
 int nums[100];
-'''
+```
    
 <br>
 2. What will be the size of each element of an array.
