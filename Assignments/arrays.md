@@ -22,7 +22,7 @@ All elements in an array are the same type, so each element takes the same amoun
     * If it is double, each element is typically 8 bytes.
 
     * If it is char, each element is 1 byte.
-    
+
 ```C++
 int numbers[100];
 
@@ -47,6 +47,22 @@ int numbers[100];
 
 4. Normally the search operation in an array looks for the first instance of a given value. But sometimes we may want to look for every instance of a given value. For example, say we want to count how many times the value “apple” is found inside an array. How many steps would it take to find all the “apples”? Give your answer in terms of N. 
 > This would take N steps, linear time. Because the program must check every element once to match "apples", it will take N steps. In actual code, you can identify this by looking at the loops being used. Since you would use a single for loop to traverse through the array and search for "apples", the time is linear or O(N).
+
+```c++
+string array[5] = {"bananas", "apples", "apples", "oranges", "apples"};
+
+int count = 0;
+int length = sizeof(array) / sizeof(array[0]);
+
+for (int i = 0; i < length; ++i) {
+    if (array[i] == "apples") {
+        count++;
+    }
+}
+
+cout << "Number of 'apples': " << count << endl;
+
+```
 
 <br>
 
