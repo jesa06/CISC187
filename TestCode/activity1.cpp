@@ -8,5 +8,21 @@ int main() {
     
     cout << "Address of element 4: " << numArray + 3 << endl;
     cout << "Address of element 4: " << &numArray[3] << endl;
-    return 0;
-}
+
+
+    cout << "===================================" << endl;
+
+    string array[5] = {"bananas", "apples", "apples", "oranges", "apples"};
+
+    int count = 0;
+    int length = sizeof(array) / sizeof(array[0]);
+
+    for (int i = 0; i < length; ++i) {
+        if (array[i] == "apples") {
+            count++;
+        }
+    }
+
+    cout << "Number of 'apples': " << count << endl;
+        return 0;
+    }
