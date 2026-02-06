@@ -11,21 +11,42 @@ int nums[100];
 ```
    
 <br>
-2. What will be the size of each element of an array.
->
+2. What will be the size of each element of an array?
+> The size of each element in an array depends on the data type of the array.
+All elements in an array are the same type, so each element takes the same amount of memory.
 
+* For example:
+
+    * If the array is of type int, each element is typically 4 bytes.
+
+    * If it is double, each element is typically 8 bytes.
+
+    * If it is char, each element is 1 byte.
+    
+```C++
+int numbers[100];
+
+    cout << "Size of one element: " << sizeof(numbers[0]) << " bytes" << endl;
+```
 <br>
 
 3. For an array containing 100 elements, provide the number of steps the following operations would take: 
-* Reading
-* Searching for a value not contained within the array
-* Insertion at the beginning of the array
-* Insertion at the end of the array
-* Deletion at the beginning of the array
-* Deletion at the end of the array
+    * Reading: 1 step
+        * Direct access with a given index
+    * Searching for a value not contained within the array: 100 steps
+        * Must go through and check each element 
+    * Insertion at the beginning of the array: 101 steps
+        * Insert an element then shift the other 100 elements over to the right by one position
+    * Insertion at the end of the array: 1 step
+        * Just place another element at the end, no shifting needed
+    * Deletion at the beginning of the array: 100 steps
+        * Delete the first element, shift the remaining 99 elements one position to the left
+    * Deletion at the end of the array: 1 step
+        * Just remove the last element in the array, no shifting needed 
 <br>
 
 4. Normally the search operation in an array looks for the first instance of a given value. But sometimes we may want to look for every instance of a given value. For example, say we want to count how many times the value “apple” is found inside an array. How many steps would it take to find all the “apples”? Give your answer in terms of N. 
+> This would take N steps, linear time. Because the program must check every element once to match "apples", it will take N steps. In actual code, you can identify this by looking at the loops being used. Since you would use a single for loop to traverse through the array and search for "apples", the time is linear or O(N).
 
 <br>
 
