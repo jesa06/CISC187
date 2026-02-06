@@ -8,8 +8,9 @@ int main() {
     
     cout << "Address of element 4: " << numArray + 3 << endl;
     cout << "Address of element 4: " << &numArray[3] << endl;
+    cout << "Size of one element: " << sizeof(numArray[0]) << " bytes" << endl;
 
-
+    
     cout << "===================================" << endl;
 
     string array[5] = {"bananas", "apples", "apples", "oranges", "apples"};

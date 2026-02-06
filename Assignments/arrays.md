@@ -38,7 +38,7 @@ int numbers[100];
     * Searching for a value not contained within the array: 100 steps
         * Must go through and check each element 
     * Insertion at the beginning of the array: 101 steps
-        * Insert an element then shift the other 100 elements over to the right by one position
+        * Shift over the 100 elements over to the right by one position, then insert the new element at the beginning
     * Insertion at the end of the array: 1 step
         * Just place another element at the end, no shifting needed
     * Deletion at the beginning of the array: 100 steps
