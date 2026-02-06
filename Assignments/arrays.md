@@ -13,6 +13,7 @@ int nums[100];
 <br>
 
 2. What will be the size of each element of an array?
+
 > The size of each element in an array depends on the data type of the array.
 All elements in an array are the same type, so each element takes the same amount of memory.
 
