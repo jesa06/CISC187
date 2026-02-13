@@ -19,7 +19,7 @@
 5. Write pseudocode for a randomized search algorithm that searches for a given key by randomly selecting indices without repetition. Use a dataset of 100,000 distinct elements, stored in a vector. Each element may be examined at most once during the search. Analyze and state the best-case, average-case, and worst-case time complexities of this algorithm using Big-O notation.
     * Then, implement the algorithm in C++, using only the following standard headers: <vector> for data storage, <random> for random index generation, and <iostream> for input and output. The implementation should track and report the number of comparisons performed during the search.
     * Finally, compare and contrast the randomized search algorithm with linear search and binary search in terms of time complexity, data requirements (such as ordering), and practical efficiency. Discuss scenarios in which each approach may be preferred, highlighting the advantages and limitations of randomized search relative to linear and binary search. - 5 pts
-    
+
 ```c++
 RandomizedSearch(vector A of size N, key):
 
@@ -43,3 +43,51 @@ RandomizedSearch(vector A of size N, key):
 
     return (-1, comparisons)          // not found
 ```
+
+|Feature|Randomized Search|Linear Search|BinarySearch|
+|-|-|-|-|
+|Best Time|O(1)|O(1)|O(1)|
+|Average Time|O(N)|O(N)|O(log N)|
+|Worst Time|O(N)|O(N)|O(log N)|
+|Requires Sorted Data?|No|No|Yes|
+|Checks Each Element Once?|Yes|Yes|No|
+
+### When to Use Each
+
+#### Randomized Search
+* Good when:
+    * Data is unsorted.
+    * You want a random probe order (e.g., avoiding bias or adversarial patterns).
+    * Useful in probabilistic or randomized algorithms.
+* Limitations:
+    * Same Big-O as linear search.
+    * Extra overhead for shuffling.
+    * Unpredictable runtime.
+
+#### Linear Search
+* Good when:
+    * Data is unsorted.
+    * Small dataset.
+    * Simple implementation required.
+    * Streaming data (cannot reorder or index easily).
+
+* Limitations:
+    * Slow for large datasets (O(N)).
+
+#### Binary Search
+* Best choice when:
+    * Data is sorted.
+    * Large datasets.
+    * Need fast and predictable search (O(log N)).
+
+* Limitations:
+    * Requires sorted data.
+    * Not ideal if data changes frequently (sorting cost).
+
+#### Practical Efficiency Summary
+
+* Fastest overall: Binary Search (when sorted).
+
+* Simplest: Linear Search.
+
+* Randomized: Similar to linear but useful in randomized/probabilistic contexts, not for speed.
