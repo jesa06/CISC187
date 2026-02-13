@@ -76,6 +76,18 @@ RandomizedSearch(vector A of size N, key):
 * Limitations:
     * Slow for large datasets (O(N)).
 
+* Step Analysis:
+    * Let the array have N elements.
+    * In the worst case, the key is either not in the array or is the last element.
+        * This requires checking all N elements → N comparisons.
+    * In the best case, the key is the first element → 1 comparison.
+    * On average, assuming the key is equally likely to be anywhere, we examine N/2 elements.
+
+* **Big-O Explanation**:
+    * Big-O notation ignores constants and lower-order terms.
+    * So, whether we check N elements or N/2 elements, the complexity is:
+        * Linear Search: 𝑂(𝑁)
+
 #### Binary Search
 * Best choice when:
     * Data is sorted.
@@ -85,6 +97,13 @@ RandomizedSearch(vector A of size N, key):
 * Limitations:
     * Requires sorted data.
     * Not ideal if data changes frequently (sorting cost).
+
+* Step Analysis:
+    * Each comparison halves the remaining array size.
+    * Initially: N elements.
+    * After 1 comparison: N/2 elements.
+    * After 2 comparisons: N/4 elements.
+    * After k comparisons: N / 2^k elements remain.
 
 #### Practical Efficiency Summary
 
