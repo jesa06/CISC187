@@ -4,10 +4,15 @@
 ## Tasks
 
 1. How many steps would it take to perform a linear search for the number 8 in the ordered array, [2, 4, 6, 8, 10, 12, 13]? - 1 pt
+> It would take 4 steps to find number 8 using linear search because it is the 4th element of the array and linear search just compares the key to the elements of the array sequentially, starting from the beginning of the array to the end.
 
 2. How many steps would binary search take for the previous example? - 1 pt
+> It would only take 1 step to find number 8 using binary search because it first checks the middle element of the list, and 8 is at the middle. (0+6) / 2 = 3... index 3
 
 3. What is the maximum number of steps it would take to perform a binary search on an array of size 100,000? - 1 pt
+> The maximum number of steps it would take to perform a binary search on an array of 100,000 elements would be log2(100,000) which is about 17 steps.
+    * 2^16 = 65,536
+    * 2^17 = 131,072
 
 4. Write a C++ program that implements both linear search and binary search algorithms using an array of 100,000 elements. The program should record and report the number of steps (comparisons) performed during each search operation. In addition, analyze and justify the observed behavior by providing a theoretical explanation using Big-O notation, demonstrating why linear search exhibits O(N) complexity and binary search exhibits O(log⁡N) complexity. - 2 pts
 
