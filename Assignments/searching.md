@@ -113,4 +113,4 @@ RandomizedSearch(vector A of size N, key):
 
 * Randomized: Similar to linear but useful in randomized/probabilistic contexts, not for speed.
 
-### Video Submission: [Video](https://youtu.be/p5MY5IKmXps)
+### Video Submission: [Video Link](https://youtu.be/p5MY5IKmXps)
