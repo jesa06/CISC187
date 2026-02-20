@@ -48,6 +48,7 @@ int main() {
 
     // randomize array elements
     for (int i = 0; i < SIZE; i++) {
+        
         numArray[i] = rand() % 100001;   // random numbers
     }
    
