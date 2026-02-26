@@ -1,4 +1,4 @@
-# Activity 4: Sorting Algorithms, Insertion Sort
+# Activity 4a: Sorting Algorithms, Insertion Sort
 ----------------------------------
 
 ## Tasks
