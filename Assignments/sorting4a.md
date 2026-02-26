@@ -5,7 +5,7 @@
 1. Proof that, under the average-case scenario, the insertion sort has a time complexity of O(N^2). Draw a clear figure and show all the operations clearly. **2 pts**
 > 
 2. At the start of the insertion sort, the index of the inspected value is set to 1. Change the index of the inspected value and verify that the total number of operations equals 20. Consider the worst-case scenario. Use N=5, where N is the number of elements. **4 pts**
->  To make the total number of operations equal 20 in the worst case for insertion sort with N = 5, you need to start the inspected index at 0. 
+	>  To make the total number of operations equal 20 in the worst case for insertion sort with N = 5, you need to start the inspected index at 0. 
 ```
 for (let i = 0; i < N; i++)
 ```
