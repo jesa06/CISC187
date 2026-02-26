@@ -49,6 +49,7 @@ string analyzeArray(int arr[], int n) {
     else
         return "average";
 }
+
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
@@ -76,15 +77,15 @@ int main() {
     string scenario = analyzeArray(arr, N);
 
     if (scenario == "best") {
-        cout << "Using Insertion Sort (Best/Nearly Sorted Case)\n";
+        cout << "\nBest, Using Insertion Sort (Nearly Sorted Case)\n";
         insertionSort(arr, N);
      }
     else if (scenario == "worst") {
-        cout << "Using Selection Sort (Reverse Sorted Case)\n";
+        cout << "\nWorst, Using Selection Sort (Reverse Sorted Case)\n";
         selectionSort(arr, N);
     }
     else {
-        cout << "Using Selection Sort (Average Case)\n";
+        cout << "\nUsing Selection Sort (Average Case)\n";
         selectionSort(arr, N);
     }
 
