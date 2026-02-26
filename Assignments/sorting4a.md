@@ -6,11 +6,11 @@
 > 
 2. At the start of the insertion sort, the index of the inspected value is set to 1. Change the index of the inspected value and verify that the total number of operations equals 20. Consider the worst-case scenario. Use N=5, where N is the number of elements. **4 pts**
 	>  To make the total number of operations equal 20 in the worst case for insertion sort with N = 5, you need to start the inspected index at 0. 
-```
-for (let i = 0; i < N; i++)
-```
+	```
+	for (let i = 0; i < N; i++)
+	```
 
-> In the worst-case scenario with N = 5, the number of comparisons become 10 and the number of shifts become 10...so there would be 20 total operations.
+	> In the worst-case scenario with N = 5, the number of comparisons become 10 and the number of shifts become 10...so there would be 20 total operations.
 
 3. The following function returns whether or not a capital “X” is present within a string. **4 pt**
 
