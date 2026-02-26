@@ -26,9 +26,9 @@ function containsX(string) {
 }
 ```
 
-a. What is this function’s time complexity regarding Big O Notation?
+	* What is this function’s time complexity regarding Big O Notation?
 	> The functions time complexity is O(N) because it always traverses through the entire string of length, N. In all cases: best, worst, and average scenario, where there is no "X", every character will be examined.
-b. Then, modify the code to improve the algorithm’s efficiency for best- and average-case scenarios.
+	* Then, modify the code to improve the algorithm’s efficiency for best- and average-case scenarios.
 	> To improve on this code I would put an earlier return statement to terminate the program once the capital "X" is found, so that we do not have to keep searching once we find it. 
 
 '''
