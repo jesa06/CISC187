@@ -3,7 +3,7 @@
 
 ## Tasks
 1. Proof that, under the average-case scenario, the insertion sort has a time complexity of O(N^2). Draw a clear figure and show all the operations clearly. **2 pts**
-![Insertion Example](/Users/jesa_old/vscode/CISC187/Images/insertion.png)
+![Insertion Example](Images/insertion.png)
 	> I found that this randomized array ended up being around 12 operations, which is not super close to N^2, 25. I think this case just ended up being closer to a "best-case" as it is close to 2N or 2*5 operations. However, you can see that through each pass, the number of operations grow...so as N gets bigger, the work increases very fast. You can say that the total operations grow quadratically. 
 2. At the start of the insertion sort, the index of the inspected value is set to 1. Change the index of the inspected value and verify that the total number of operations equals 20. Consider the worst-case scenario. Use N=5, where N is the number of elements. **4 pts**
 	>  To make the total number of operations equal 20 in the worst case for insertion sort with N = 5, you need to start the inspected index at 0. 
