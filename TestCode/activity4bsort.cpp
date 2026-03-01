@@ -1,5 +1,7 @@
 #include <random>
 #include <iostream>
+#include <cstdlib>   // for rand()
+#include <algorithm>
 using namespace std;
 
 // PART A 
@@ -7,7 +9,7 @@ void selectionSort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         int minIndex = i; // lower val placed at index 0
         for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[i]) { // compare lower val with the index above
+            if (arr[j] < arr[minIndex]) { // compare lower val with the index above
                 minIndex = j; // make the higher index the lower value if so
             }
         }
@@ -15,19 +17,24 @@ void selectionSort(int arr[], int n) {
     }
 }
 
-void insertionSort(int arr[], int n) {
-    for (int i = 1; i < n; i++) { //i is current element being inserted
-        int key = arr[i]; // storing current inserting value
-        int j = i - 1; //Start comparing with the element to the left
-        // j moves backward through the sorted portion
+void insertionSort(int arr[], int n, int &comparisons, int &shifts) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
 
-    // keep moving left as long as we haven't passed the beginning and current value is bigger than the key
-        while (j >= 0 && arr[j] > key) { 
-            arr[j + 1] = arr[j]; //Shift the larger value one step to the right
-            j--; // move left
+        while (j >= 0) {
+            comparisons++;  // count comparison
+
+            if (arr[j] > key) {
+                arr[j + 1] = arr[j]; // shift
+                shifts++;
+                j--;
+            } else {
+                break;
+            }
         }
 
-        arr[j + 1] = key; // insert key into correct position
+        arr[j + 1] = key; // insertion
     }
 }
 
@@ -75,10 +82,15 @@ int main() {
     cout << "Otherwise, average case, using Selection Sort." << endl;
 
     string scenario = analyzeArray(arr, N);
+    cout << "Scenario: " << scenario << endl;
+   
+   int comp = 0, shifts = 0;
 
     if (scenario == "best") {
         cout << "\nBest, Using Insertion Sort (Nearly Sorted Case)\n";
-        insertionSort(arr, N);
+        insertionSort(arr, N, comp, shifts);
+        cout << "Comparisons: " << comp << endl;
+        cout << "Shifts: " << shifts << endl;
      }
     else if (scenario == "worst") {
         cout << "\nWorst, Using Selection Sort (Reverse Sorted Case)\n";
@@ -88,6 +100,13 @@ int main() {
         cout << "\nUsing Selection Sort (Average Case)\n";
         selectionSort(arr, N);
     }
+
+    cout << "Test worst case scenario with 5 elements: arr[5] = {5, 4, 3, 2, 1}.\n";
+    int worstArr[5] = {5, 4, 3, 2, 1};
+    comp = 0, shifts = 0;
+    insertionSort(worstArr, 5, comp, shifts);  
+    cout << "Comparisons: " << comp;
+    cout << "\nShifts: " << shifts;  
 
     return 0;
 }
