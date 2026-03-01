@@ -65,6 +65,5 @@ function containsX(string) {
 		
 
 <br>
-<br>
 
-## Video Submission: [Video]()
+## Video Submission: [Video](https://youtu.be/8XqneIUXxAQ)
