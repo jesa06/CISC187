@@ -21,13 +21,13 @@
 </p>
 <p align="center"><em>Insertion Sort At Indices 2 and 3</em></p>
 <br>
-a. Start the algorithm at i = 1. Verify the total operations = 20.
-> It is 20, 10 comparisons and 10 swaps. 
-b. Start the algorithm at i = 2, then i = 3. Count operations again.
-> Operations for starting at i = 2, 18 operations. 9 comparisons and 9 shifts. 
-> Operations for starting at i = 3, 14 operations. 7 comparisons and 7 shifts.
-c. For (b), does the algorithm still sort the entire array? Explain.
-> The algorithm does not sort the entire array because in insertion sort, it assumes that the left side of the array (after the chosen starting index) is already sorted. If you start at i = 2, the array will end up with {1, 2, 3, 5, 4}. If you start at i = 3, the array will end up with {1, 2, 5, 4, 3}. Simply, the sort ends once the it reaches the end of the array.
+	* Start the algorithm at i = 1. Verify the total operations = 20.
+		> It is 20, 10 comparisons and 10 swaps. 
+	* Start the algorithm at i = 2, then i = 3. Count operations again.
+	> Operations for starting at i = 2, 18 operations. 9 comparisons and 9 shifts. 
+	> Operations for starting at i = 3, 14 operations. 7 comparisons and 7 shifts.
+	* For (b), does the algorithm still sort the entire array? Explain.
+	> The algorithm does not sort the entire array because in insertion sort, it assumes that the left side of the array (after the chosen starting index) is already sorted. If you start at i = 2, the array will end up with {1, 2, 3, 5, 4}. If you start at i = 3, the array will end up with {1, 2, 5, 4, 3}. Simply, the sort ends once the it reaches the end of the array.
 **4 pts**
 
 3. The following function returns whether or not a capital “X” is present within a string. **4 pt**
