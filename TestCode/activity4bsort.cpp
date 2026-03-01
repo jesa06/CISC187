@@ -82,7 +82,7 @@ int main() {
     cout << "Otherwise, average case, using Selection Sort." << endl;
 
     string scenario = analyzeArray(arr, N);
-    cout << "Scenario: " << scenario << endl;
+    cout << "\nScenario: " << scenario << endl;
    
    int comp = 0, shifts = 0;
 
@@ -107,6 +107,8 @@ int main() {
     insertionSort(worstArr, 5, comp, shifts);  
     cout << "Comparisons: " << comp;
     cout << "\nShifts: " << shifts;  
+
+   
 
     return 0;
 }
