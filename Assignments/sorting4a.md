@@ -12,7 +12,7 @@
 > I found that this randomized array ended up being around 12 operations, which is not super close to N^2, 25. I think this case just ended up being closer to a "best-case" as it is close to 2N or 2*5 operations. However, you can see that through each pass, the number of operations grow...so as N gets bigger, the work increases very fast. You can say that the total operations grow quadratically. 
 
 
-2. Insertion sort normally begins with i = 1 (0-based indexing). Let N = 5 and assume the array is in descending order (worst case).
+2. Insertion sort normally begins with i = 1 (0-based indexing). Let N = 5 and assume the array is in descending order (worst case). **4 pts**
 	* Count operations where:
 		* a comparison is A[j] > key
 		* a shift is A[j+1] = A[j]
@@ -25,12 +25,12 @@
 	* Start the algorithm at i = 1. Verify the total operations = 20.
 		> It is 20, 10 comparisons and 10 swaps. 
 	* Start the algorithm at i = 2, then i = 3. Count operations again.
-	> Operations for starting at i = 2, 18 operations. 9 comparisons and 9 shifts. 
-	> Operations for starting at i = 3, 14 operations. 7 comparisons and 7 shifts.
+		> Operations for starting at i = 2, 18 operations. 9 comparisons and 9 shifts. 
+		> Operations for starting at i = 3, 14 operations. 7 comparisons and 7 shifts.
 	* For (b), does the algorithm still sort the entire array? Explain.
-	> The algorithm does not sort the entire array because in insertion sort, it assumes that the left side of the array (after the chosen starting index) is already sorted. If you start at i = 2, the array will end up with {1, 2, 3, 5, 4}. If you start at i = 3, the array will end up with {1, 2, 5, 4, 3}. Simply, the sort ends once the it reaches the end of the array.
-**4 pts**
+		> The algorithm does not sort the entire array because in insertion sort, it assumes that the left side of the array (after the chosen starting index) is already sorted. If you start at i = 2, the array will end up with {1, 2, 3, 5, 4}. If you start at i = 3, the array will end up with {1, 2, 5, 4, 3}. Simply, the sort ends once the it reaches the end of the array.
 
+<br>
 3. The following function returns whether or not a capital “X” is present within a string. **4 pt**
 
 ```
