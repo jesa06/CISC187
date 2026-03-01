@@ -16,7 +16,11 @@
 	* Count operations where:
 		* a comparison is A[j] > key
 		* a shift is A[j+1] = A[j]
-
+<p align="center">
+  <img src="https://github.com/jesa06/CISC187/blob/main/Images/task2.png" width="400">
+</p>
+<p align="center"><em>Insertion Sort At Indices 2 and 3</em></p>
+<br>
 a) Start the algorithm at i = 1. Verify the total operations = 20.
 > It is 20, 10 comparisons and 10 swaps. 
 b) Start the algorithm at i = 2, then i = 3. Count operations again.
