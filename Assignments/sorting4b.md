@@ -43,25 +43,25 @@ string analyzeArray(int arr[], int n) {
     int descendingPairs = 0;
 
     for (int i = 0; i < n - 1; i++) {
-        if (arr[i] <= arr[i + 1])
-            ascendingPairs++;
+        if (arr[i] <= arr[i + 1]) 
+            ascendingPairs++; 
         if (arr[i] >= arr[i + 1])
             descendingPairs++;
     }
 
-    if (ascendingPairs >= 0.8 * (n - 1))
+    if (ascendingPairs >= 0.8 * (n - 1)) // 80% or more adjacent pairs are ascending
         return "best";
-    else if (descendingPairs >= 0.8 * (n - 1))
+    else if (descendingPairs >= 0.8 * (n - 1)) // 80% or more adjacent pairs are descending
         return "worst";
     else
-        return "average";
+        return "average"; // array is super mixed/random
 }
 
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; i++) {
         cout << arr[i] << " ";
     }
-    cout << endl;
+    cout << endl; // nice spacing
 }
 
 
