@@ -165,6 +165,7 @@ int main() {
 * Why your program **selects one sorting algorithm over the other** in specific scenarios.
 > The program selects sorting algorithms based on input characteristics. When the array is nearly sorted, 80% or more adjacent elements are in ascending order, this means that we have a best-case scenario, so it chooses the insertion sort. This is because it minimizes unnecessary comparisons and shifts. The program chooses to use selection sort when we have either a worst-case scenario or an average case scenario...so when ≥ 80% of adjacent pairs are in descending order or when the array is mostly random or in a mixed order.
 * A brief discussion of how **input order affects the time complexity of Selection Sort and Insertion Sort**.
+<br>
 **Insertion Sort**
 
 | Case    | Time Complexity | Reason |
