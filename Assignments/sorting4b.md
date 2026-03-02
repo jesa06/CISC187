@@ -180,7 +180,7 @@ This is implemented by comparing the number of ascending or descending adjacent 
 | Average | O(n²)| Partial shifting required |
 | Worst | O(n²) | Reverse sorted → maximum shifting |
     * Insertion Sort is adaptive, meaning it performs better when the input is already somewhat sorted.
-<br>
+    
 **Selection Sort**
 | Case | Time Complexity | Reason |
 | - | - | - |
