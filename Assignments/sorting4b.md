@@ -182,5 +182,6 @@ int main() {
 | Average | O(n²) | Same number of comparisons |
 | Worst | O(n²) | No improvement from input order |
     * Selection Sort is non-adaptive, meaning input order does not affect its performance.
-
+ 
+* Input order significantly affects the time complexity of Insertion Sort, but has virtually no impact on Selection Sort, which always runs in quadratic time O(n²), regardless of the input.
 
