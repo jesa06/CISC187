@@ -159,16 +159,9 @@ int main() {
 -----------------------------------
 ## Part C: Documentation
 * The **threshold definition** you used to differentiate between best, average, and worst cases.
-> The program uses an 80% threshold to classify the input array:
-    * If ≥ 80% of adjacent pairs are in ascending order → Best Case (Nearly Sorted)
-    * If ≥ 80% of adjacent pairs are in descending order → Worst Case (Reverse Sorted)
-    * Otherwise → Average Case
-This is implemented by comparing the number of ascending or descending adjacent pairs to: 0.8*(𝑛−1)
+> The program uses an 80% threshold to classify the input array: If ≥ 80% of adjacent pairs are in ascending order → Best Case (Nearly Sorted), if ≥ 80% of adjacent pairs are in descending order → Worst Case (Reverse Sorted), or otherwise → Average Case. This is implemented by comparing the number of ascending or descending adjacent pairs to: 0.8*(𝑛−1)
 * The **reasoning behind** your assumption.
-> I chose the 80% because it represents a strong majority of ordered pairs without requiring perfect sorting. Real-world data is often partially sorted, not perfectly sorted.
-    * A lower threshold (like 50–70%) might misclassify random data as “nearly sorted.”
-    * A higher threshold (like 90–100%) would be too strict and rarely triggered.
-    * Thus, 80% provides a balanced and practical cutoff for detecting meaningful order in the data.
+> I chose the 80% because it represents a strong majority of ordered pairs without requiring perfect sorting. Real-world data is often partially sorted, not perfectly sorted. A lower threshold (like 50–70%) might misclassify random data as “nearly sorted.” A higher threshold (like 90–100%) would be too strict and rarely triggered.Thus, 80% provides a balanced and practical cutoff for detecting meaningful order in the data.
 * Why your program **selects one sorting algorithm over the other** in specific scenarios.
 > The program selects sorting algorithms based on input characteristics. When the array is nearly sorted, 80% or more adjacent elements are in ascending order, this means that we have a best-case scenario, so it chooses the insertion sort. This is because it minimizes unnecessary comparisons and shifts. The program chooses to use selection sort when we have either a worst-case scenario or an average case scenario...so when ≥ 80% of adjacent pairs are in descending order or when the array is mostly random or in a mixed order.
 * A brief discussion of how **input order affects the time complexity of Selection Sort and Insertion Sort**.
@@ -180,7 +173,7 @@ This is implemented by comparing the number of ascending or descending adjacent 
 | Average | O(n²)| Partial shifting required |
 | Worst | O(n²) | Reverse sorted → maximum shifting |
     * Insertion Sort is adaptive, meaning it performs better when the input is already somewhat sorted.
-    
+
 **Selection Sort**
 | Case | Time Complexity | Reason |
 | - | - | - |
