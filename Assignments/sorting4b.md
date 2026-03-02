@@ -173,19 +173,20 @@ This is implemented by comparing the number of ascending or descending adjacent 
 > The program selects sorting algorithms based on input characteristics. When the array is nearly sorted, 80% or more adjacent elements are in ascending order, this means that we have a best-case scenario, so it chooses the insertion sort. This is because it minimizes unnecessary comparisons and shifts. The program chooses to use selection sort when we have either a worst-case scenario or an average case scenario...so when ≥ 80% of adjacent pairs are in descending order or when the array is mostly random or in a mixed order.
 * A brief discussion of how **input order affects the time complexity of Selection Sort and Insertion Sort**.
 **Insertion Sort**
-| Case    | Time Complexity | Reason                              |
-| ------- | --------------- | ----------------------------------- |
-| Best    | O(n)            | Already sorted → no shifting needed |
-| Average | O(n²)           | Partial shifting required           |
-| Worst   | O(n²)           | Reverse sorted → maximum shifting   |
+
+| Case    | Time Complexity | Reason |
+| - | - | - |
+| Best | O(n)| Already sorted → no shifting needed |
+| Average | O(n²)| Partial shifting required |
+| Worst | O(n²) | Reverse sorted → maximum shifting |
     * Insertion Sort is adaptive, meaning it performs better when the input is already somewhat sorted.
 <br>
 **Selection Sort**
-| Case    | Time Complexity | Reason                               |
-| ------- | --------------- | ------------------------------------ |
-| Best    | O(n²)           | Always scans entire unsorted portion |
-| Average | O(n²)           | Same number of comparisons           |
-| Worst   | O(n²)           | No improvement from input order      |
+| Case | Time Complexity | Reason |
+| - | - | - |
+| Best | O(n²) | Always scans entire unsorted portion |
+| Average | O(n²) | Same number of comparisons |
+| Worst | O(n²) | No improvement from input order |
     * Selection Sort is non-adaptive, meaning input order does not affect its performance.
 
 
