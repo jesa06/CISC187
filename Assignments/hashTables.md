@@ -42,7 +42,7 @@ int HashTable::hashFunction(const string& key) const {
         hash = hash * prime + c;
     }
 
-    return hash % capacity;
+    return hash % capacity; //compresses that large number into a valid index.
 }
 ```
 
