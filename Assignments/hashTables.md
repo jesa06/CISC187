@@ -33,6 +33,8 @@ public:
 
 ## Part 2: Hash Function
 > Implement a polynomial rolling hash:
+hash(string) = 
+
 ```cpp
 int HashTable::hashFunction(const string& key) const {
     const int prime = 31;
@@ -42,7 +44,7 @@ int HashTable::hashFunction(const string& key) const {
         hash = hash * prime + c;
     }
 
-    return hash % capacity; //compresses that large number into a valid index.
+    return hash % capacity; // compresses that large number into a valid index.
 }
 ```
 
