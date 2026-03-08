@@ -172,7 +172,7 @@ int main() {
                     "phone", "wallet", "hairbrush", "toothbrush", "computer", "laptop", "homework", "work", "job", "sport",
                     "exercise", "train", "gym", "run", "walk", "eat", "plant", "life", "love", "laugh",
                     "fruit", "Jesus", "God", "church", "worship", "praise", "patience", "humble", "kind", "death",
-                    "gospel", "truth", "way", "light", "chair", "shoe", "pants", "shirt", "road", "sky"};
+                    "gospel", "truth", "way", "Light", "chair", "shoe", "pants", "shirt", "road", "sky"};
 
     HashTable ht; 
 
