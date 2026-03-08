@@ -30,7 +30,31 @@ class HashTable {
         void printTable() const;
         int getCapacity() const;
         int getCollisionCount() const;
+        int getMaxBucketSize() const;
+        double getAverageBucketLength() const;
 };
+
+int HashTable::getMaxBucketSize() const {
+    int maxSize = 0;
+
+    for (const auto& bucket : table) {
+        if (bucket.size() > maxSize) {
+            maxSize = bucket.size();
+        }
+    }
+    
+    return maxSize;
+}
+
+double HashTable::getAverageBucketLength() const {
+    int total = 0;
+
+    for (const auto& bucket : table) { //traverse through each bucket
+        total += bucket.size(); // add the size to total size
+    }
+
+    return (double) total / capacity;
+}
 
 bool HashTable::remove(const string& key) {
     int index = hashFunction(key);
@@ -193,8 +217,46 @@ int main() {
 
     // Part 6 -- Experimental Analysis
     cout << "============ Experimental Analysis ============" << endl;
-    
-   
+
+    const int TEST_SIZE = 100;
+
+    /* -------- Random Strings -------- */
+    HashTable randomStrings;
+    for (int i = 0; i < TEST_SIZE; i++) {
+        randomStrings.insert(words[i], i);
+    }
+
+    cout << "\nRandom Strings:" << endl;
+    cout << "Total collisions: " << randomStrings.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << randomStrings.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << randomStrings.getAverageBucketLength() << endl;
+
+    /* -------- Sequential Keys -------- */
+    HashTable sequentialKeys;
+    for (int i = 0; i < TEST_SIZE; ++i) {
+        string key = "student" + to_string(i);
+        sequentialKeys.insert(key, i);
+    }
+
+    cout << "\nSequential Keys:" << endl;
+    cout << "Total collisions: " << sequentialKeys.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << sequentialKeys.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << sequentialKeys.getAverageBucketLength() << endl;
+
+
+    /* -------- Same Prefix Keys -------- */
+    HashTable prefixKeys;
+
+    for (int i = 0; i < TEST_SIZE; i++) {
+        string key = "data_" + to_string(i);
+        prefixKeys.insert(key, i);
+    }
+
+    cout << "\nSame Prefix Keys:" << endl;
+    cout << "Total collisions: " << prefixKeys.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << prefixKeys.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << prefixKeys.getAverageBucketLength() << endl;
+
     return 0;
 }
 

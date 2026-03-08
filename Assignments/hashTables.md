@@ -189,7 +189,7 @@ void HashTable::rehash() {
     }
 }
 
-//Part 5 -- Testing Program
+// Part 5 -- Testing Program
 
 int main() {
     const int N = 100;
@@ -245,13 +245,54 @@ int main() {
         cout << "'road' NOT found" << endl;
     }
 
+
     // Part 6 -- Experimental Analysis
     cout << "============ Experimental Analysis ============" << endl;
-    
-   
+
+    const int TEST_SIZE = 100;
+
+    /* -------- Random Strings -------- */
+    HashTable randomStrings;
+    for (int i = 0; i < TEST_SIZE; i++) {
+        randomStrings.insert(words[i], i); //uses my hard coded random words list
+    }
+
+    cout << "\nRandom Strings:" << endl;
+    cout << "Total collisions: " << randomStrings.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << randomStrings.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << randomStrings.getAverageBucketLength() << endl;
+
+    /* -------- Sequential Keys -------- */
+    HashTable sequentialKeys;
+    for (int i = 0; i < TEST_SIZE; ++i) {
+        string key = "student" + to_string(i); //student0, student1,...
+        sequentialKeys.insert(key, i);
+    }
+
+    cout << "\nSequential Keys:" << endl;
+    cout << "Total collisions: " << sequentialKeys.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << sequentialKeys.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << sequentialKeys.getAverageBucketLength() << endl;
+
+
+    /* -------- Same Prefix Keys -------- */
+    HashTable prefixKeys;
+
+    for (int i = 0; i < TEST_SIZE; i++) {
+        string key = "data_" + to_string(i); //data_0, data_1,...
+        prefixKeys.insert(key, i);
+    }
+
+    cout << "\nSame Prefix Keys:" << endl;
+    cout << "Total collisions: " << prefixKeys.getCollisionCount() << endl;
+    cout << "Maximum bucket size: " << prefixKeys.getMaxBucketSize() << endl;
+    cout << "Average bucket length: " << prefixKeys.getAverageBucketLength() << endl;
+
     return 0;
 }
 
 ```
 ## Part 6:  Experimental Analysis 
-> Short Explanation:
+> Short Explanation: The experimental analysis shows that the random string inputs produced the most collisions in the hash table. A total of 19 collisions occurred, and the maximum bucket size reached 3. This indicates that some of the randomly distributed words hashed to the same index, which caused multiple elements (3) to be stored in the same bucket. The average bucket length remained relatively small, showing that overall the elements were still distributed fairly evenly across the table.
+
+In contrast, the sequential keys and the keys with the same prefix produced no collisions, with a maximum bucket size of only 1. This means that each key was placed into a different bucket. The hash function was able to distribute these keys effectively even though they followed a predictable pattern. As a result, the average bucket length was similar across tests, but the lack of collisions shows that the hash function (polynomial hashing) handled these structured keys very efficiently.
