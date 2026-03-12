@@ -1,4 +1,4 @@
-# Activity 1: Array data structure
+# Activity 6: Stacks and Queues 
 ----------------------------------
 
 ##  Tasks
@@ -17,6 +17,7 @@
 <br>
 
 3. Rewrite ENQUEUE and DEQUEUE to detect **underflow** and **overflow** of a queue. (see Listings 4 & 5 in the book). **Code is not required. 1 pt**
+
 *Listing 4 Pseudocode of ENQUEUE(Q,x)*
 ```
 if ((Q.head == Q.tail + 1) || ((Q.head == 1) && (Q.tail == Q.length))) // Full queue 
