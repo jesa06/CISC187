@@ -17,5 +17,28 @@
 <br>
 
 3. Rewrite ENQUEUE and DEQUEUE to detect **underflow** and **overflow** of a queue. (see Listings 4 & 5 in the book). **Code is not required. 1 pt**
-
-4. A stack allows insertion and deletion of elements at only end, and a queue allows insertion at one end and deletion at the other end, a **deque** (double-ended queue) allows insertion and deletion at both ends. Write four O(1)-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array. **Code is not required. 3 pts**
+*Listing 4 Pseudocode of ENQUEUE(Q,x)*
+```
+if ((Q.head == Q.tail + 1) || ((Q.head == 1) && (Q.tail == Q.length))) // Full queue 
+  overflow
+else 
+  Q[Q.tail] = x
+  if Q.tail == Q.length
+    Q.tail = 1
+  else 
+    Q.tail = Q.tail + 1
+```
+*Listing 5 Pseudocode of DEQUEUE(Q)*
+```
+if (Q.head == Q.tail) // Empty queue
+  underflow
+else
+  x = Q[Q.head]
+  if Q.head == Q.length
+    Q.head = 1
+  else 
+    Q.head = Q.head + 1
+  return x
+```
+4. A **stack** allows insertion and deletion of elements at only end, and a queue allows insertion at one end and deletion at the other end, a **deque** (double-ended queue) allows insertion and deletion at both ends. Write four O(1)-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array. **Code is not required. 3 pts**
+```
