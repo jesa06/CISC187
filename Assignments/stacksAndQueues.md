@@ -65,8 +65,8 @@ if ((D.head == D.tail + 1) || ((D.head == 1) && (D.tail == D.length))) //if dequ
 else if deque is empty
     D.head = 1
     D.tail = 1
-else if D.tail == 1
-    D.tail = D.length
+else if D.tail == D.length
+    D.tail = 1
 else
     D.tail = D.tail + 1 //make tail one more over
 
