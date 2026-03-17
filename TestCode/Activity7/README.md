@@ -11,6 +11,7 @@
 
 ## 4. Compare a stack implemented with an array versus a linked list.
 > Arrays are simple and cache-friendly but have a fixed size and may need costly resizing, whereas linked lists allow a stack to grow dynamically with constant-time push and pop operations, but require extra memory for node pointers.
+
 | Functions | Array | Linked List | 
 | - | - | - |
 | Memory | Fixed size, Can waste memory if array is larger than needed | Dynamic size, No wasted unused space |
