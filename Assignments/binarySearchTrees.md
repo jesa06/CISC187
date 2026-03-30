@@ -14,10 +14,55 @@
 > It would take a maximum of 10 steps to search for a value within it. This is because of the formula log₂(n). Since we are using binary the base would be 2, so log₂(n) would be roughly 9.97...and we can't have part of steps so we would round up to 10!
 
 3. Write an algorithm that finds the greatest value within a binary search tree. **(2 points)**
+```cpp
+int findMax(Node* root) {
+    if (root == nullptr) {
+        cout << "Tree is empty!" << endl;
+        return -1;
+    }
 
+    while (root->right != nullptr) {
+        root = root->right;
+    }
+
+    return root->data;
+}
+```
 
 4. Write a code in C++ using the same array mentioned in #1 and implement a binary search tree. Only insertion operation is required. **(5 points)**
+```cpp
 
+// insertion operation 
+Node* insert(Node* root, int val) {
+    if (root == nullptr)
+        return new Node(val);
+
+    if (val < root->data)
+        root->left = insert(root->left, val);
+    else
+        root->right = insert(root->right, val);
+
+    return root;
+}
+
+int main() {
+    int arr[] = {1, 5, 9, 2, 4, 10, 6, 3, 8}; // example array
+    int size = 9;
+
+    Node* root = nullptr;
+
+    // Build BST
+    for (int i = 0; i < size; i++) {
+        root = insert(root, arr[i]);
+    }
+
+    cout << "Maximum value: " << findMax(root) << endl;
+
+    return 0;
+}
+```
+
+### [Full Code](https://github.com/jesa06/CISC187/blob/main/TestCode/TreeNode.cpp)
 
 
 
