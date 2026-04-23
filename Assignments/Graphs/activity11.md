@@ -14,4 +14,5 @@
 <br><br>
 
 <br>
-* Dijkstra's path is greedy. The goal is to find the shortest path from A->B. Starting for node A, it compares the weight of the edges to the adjacent nodes, B and C. Since 3 < 5, Dijkstra chooses the edge A->B. However, it misses out on the other path which ends up being shorter than 3. A->C is 5, and C->B is -4. 5-4=1 and 1 < 3. Since there is a negative weight "hidden" down the path that the apparent heavier/costlier first edge lies, it sort of tricks Dijkstra's logic. This is why Dijkstra's algorithm does not work with graphs with negative weights.
+
+Dijkstra's path is greedy. The goal is to find the shortest path from A->B. Starting for node A, it compares the weight of the edges to the adjacent nodes, B and C. Since 3 < 5, Dijkstra chooses the edge A->B. However, it misses out on the other path which ends up being shorter than 3. A->C is 5, and C->B is -4. 5-4=1 and 1 < 3. Since there is a negative weight "hidden" down the path that the apparent heavier/costlier first edge lies, it sort of tricks Dijkstra's logic. This is why Dijkstra's algorithm does not work with graphs with negative weights.
