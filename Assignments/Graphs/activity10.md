@@ -6,7 +6,7 @@
 ##  Tasks
 1. Create a theoretical graph using a pen and paper OR electronically. **(2 points)**
 <p align="center">
-  <img src="https://github.com/jesa06/CISC187/blob/main/Images/BJJposgraph.png" width="400">
+  <img src="https://github.com/jesa06/CISC187/blob/main/Images/BJJposgraph.png" width="600">
 </p>
 <p align="center"><em>Dominant Top Positions in Jiu-Jitsu</em></p>
 <br><br>
