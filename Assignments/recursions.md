@@ -23,6 +23,7 @@ end
 ```
 * The **base case** in this function is "return if low > high"...if someone incorrectly inputs low and high, and low is greater than high, the function just returns the number entered for low and it does not call itself again.
 
+<br>
 
 2. My kid was playing with my computer and changed my factorial function so that it computes factorial based on (n - 2) instead of (n - 1). Predict what will happen when we run factorial(10) using this function:
 ```
@@ -33,6 +34,7 @@ end
 ```
 * I predict that it will calculate 10 * 8 * 6 * 4 * 2 * 0 * -2 *... because it never hits the base case, it won't stop calling itself and will go "negative infinitely" until there is a **stack overflow** issue.
 
+<br>
 
 3. Following is a function in which we pass in two numbers called low and high. The function returns the sum of all the numbers from low to high. For example, if low is 1, and high is 10, the function will return the sum of all numbers from 1 to 10, which is 55. However, our code is missing the base case, and will run indefinitely! Fix the code by adding the correct base case:
 ```
@@ -41,6 +43,8 @@ def sum(low, high)
     return high + sum(low, high - 1)
 end
 ```
+
+<br>
 
 4. Here is an array containing both numbers as well as other arrays, which in turn contain numbers and arrays:
 ```
