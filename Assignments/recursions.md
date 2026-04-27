@@ -59,7 +59,7 @@ array=[ 1,
           ] 
         ],
         [15, 16, 17, 18, 19,
-          [20, 21, 22,
+           [20, 21, 22,
             [23, 24, 25,
               [26, 27, 29]
             ], 30, 31 
@@ -68,8 +68,18 @@ array=[ 1,
       ]
 ```
 Write a recursive function that prints all the numbers (and just numbers).
+
 ``` cpp
-void printElements(array int[]) {
-    if  
+using Element = std::variant<int, std::vector<Element>>;
+// elem is a box that can hold different things (because of std::variant)
+void printElements(const std::vector<Element>& array) {
+    for (const auto& elem : array) {
+        if (std::holds_alternative<int>(elem)) { // is elem holding an int ?
+            std::cout << std::get<int>(elem) << " "; // YES -> extract int and print int
+        } else { // NO → it must be a nested vector (a sub-array)
+            const auto& subArray = std::get<std::vector<Element>>(elem);
+            printElements(subArray;)
+        }
+    }
 }
 ```
