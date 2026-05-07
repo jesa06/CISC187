@@ -77,8 +77,8 @@ void printElements(const std::vector<Element>& array) {
         if (std::holds_alternative<int>(elem)) { // is elem holding an int ?
             std::cout << std::get<int>(elem) << " "; // YES -> extract int and print int
         } else { // NO → it must be a nested vector (a sub-array)
-            const auto& subArray = std::get<std::vector<Element>>(elem);
-            printElements(subArray;)
+            const auto& subArray = std::get<std::vector<Element>>(elem); // extract the vector
+            printElements(subArray;) // pass in the vector
         }
     }
 }
