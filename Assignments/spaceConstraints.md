@@ -34,6 +34,8 @@ function reverse(array) {
 ```
 * The space complexity of this function is O(N). This is because all this function does is first creates a new array which is O(1), and then it uses a loop to put in an element of the original array (starting from the end of the array) into the new array. So overall, there is a new array created with the same amount of N elements. Since the new array ultimately stores N elements, the total additional space used grows linearly with the input size, resulting in O(N) space complexity.
 
+<br>
+
 3. Create a new function to reverse an array that takes up just O(1) extra space.
 ```cpp
 function reverse(array) {
@@ -53,6 +55,8 @@ function reverse(array) {
 }
 ```
 * This is O(1) space because the amount of extra memory it uses does not grow with the input size. No matter how big the array is, you still only use variables: left, right, and temp. That’s 3 variables total, and that number never changes.
+
+<br>
 
 4. Following are three different implementations of a function that accepts an array of numbers and returns an array containing those numbers multiplied by 2. For example, if the input is [5, 4, 3, 2, 1], the output will be [10, 8, 6, 4, 2].
 
@@ -86,10 +90,11 @@ function doubleArray3(array, index=0) {
 ```
 
 <br>
+
 Fill in the table that follows to describe the efficiency of these three versions in terms of both time and space:
 
-|-|-|-|
 | Version | Time complexity | Space complexity |
+|-|-|-|
 | Version #1 | O(N) | O(N) |
 | Version #2 | O(N) | O(1) |
 | Version #3 | O(N) | O(N) |
